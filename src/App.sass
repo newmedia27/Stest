@@ -1,0 +1,89 @@
+@import './components/assets/styles/_reset'
+@import './components/assets/styles/_fonts'
+@import './components/assets/styles/_mixin'
+@import './components/assets/styles/_variables'
+
+*
+  outline: none
+  box-sizing: border-box
+
+html,body
+  min-height: 100vh
+  max-width: 100%
+  font-size: 10px
+  background-color: $bacgroundLayout
+html
+  scrollbar-color: $bgMeeting #F3F0F0
+
+body
+  margin: 0
+  padding: 0
+  background-color: #FEFFFF
+
+  &::-webkit-scrollbar-track
+
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+    border-radius: 10px
+    background-color: #F5F5F5
+
+  &::-webkit-scrollbar
+
+    width: 12px
+    background-color: #F5F5F5
+
+  &::-webkit-scrollbar-thumb
+    border-radius: 10px
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3)
+    background-color: $bgMeeting
+
+.app
+  &__container
+    max-width: 1500px
+    margin: 0 auto
+    // border: 1px solid red
+    @include r(1500)
+      padding: 0 16px
+    &--full
+      display: flex
+      width: 100%
+      height: 100%
+      position: relative
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active
+  transition: background-color 5000s
+  -webkit-text-fill-color: $bacgroundLayout !important
+
+input
+  filter: none
+  appearance: none
+  -moz-appearance: none
+  -webkit-appearance: none
+textarea
+  appearance: none
+  -moz-appearance: none
+  -webkit-appearance: none
+  &::-webkit-scrollbar
+    width: 10px
+
+  &::-webkit-scrollbar-track
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+    border-radius: 20px
+    margin: 5px 0
+  &::-webkit-scrollbar-thumb
+    border-radius: 10px
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5)
+    background-color: $bgMeeting
+
+a
+  text-decoration: none
+button:hover
+  cursor: pointer
+
+header
+  color: white
+
+.home
+  color: white

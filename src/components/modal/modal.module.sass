@@ -1,0 +1,60 @@
+@import ../assets/styles/_variables
+
+.modal
+    &__wrapper
+        max-width: 552px
+        width: 50%
+        position: absolute
+        top: -50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        background-color: $activeFilter
+        color: #000
+        animation: open 0.5s ease-in-out forwards
+        z-index: 100
+        text-align: center
+        &_closed
+            animation: closed 0.5s ease-in-out
+    &__overlay
+        background-color: rgba(255, 250, 251, 0.2)
+        backdrop-filter: blur(2px)
+        position: fixed
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        z-index: 100
+        animation: start 0.5s ease forwards
+        &_closed
+            animation: finish 0.5s ease
+.root
+    position: fixed
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+.modalRoot
+    position: relative
+    z-index: 999
+
+@keyframes open
+    0%
+        top: -100%
+        transform: translate(-50%,0)
+
+    100%
+        top: 50%
+        transform: translate(-50%, -50%)
+
+@keyframes closed
+    0%
+        top: 50%
+        transform: translate(-50%,-50%)
+
+    100%
+        top: -100%
+        transform: translate(-50%, 0)

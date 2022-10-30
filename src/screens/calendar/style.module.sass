@@ -1,0 +1,74 @@
+@import ../../components/assets/styles/_variables
+
+.Wrapper
+    margin-bottom: 40px
+.Container
+    column-gap: 12px
+    display: flex
+    flex-wrap: wrap
+
+.title
+    font-family: $LexendExtraLight
+    font-size: 4rem
+    margin-bottom: 12px
+    color: $textColor
+
+.form
+    &__wrapper
+        padding: 24px
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-bottom: 24px
+        margin-bottom: 24px
+        border-bottom: 1px solid $bgMeeting
+        h2
+            font-family: $LexendExtraLight
+            font-size: 2.4rem
+            color: $textColor
+
+.btn__container
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    margin-top: 24px
+    button
+        font-size: 2rem
+        line-height: 24px
+        font-family: $LexendMedium
+        margin-right: 24px
+        padding: 8px 16px
+        &:last-child
+            margin-right: 0
+    .submit
+        color: $activeFilter
+        background-color: $colorMeeting
+        padding: 8px 16px
+
+    .cancel
+        color: $colorMeeting
+    .delete
+        background-color: $bgMeeting
+        color: $colorMeeting
+
+.time
+    width: 100%
+    &__wrapper
+        display: grid
+        justify-content: space-between
+        grid-template-columns: 1fr 3fr
+        column-gap: 16px
+        align-items: center
+        margin-bottom: 24px
+    &__title
+        font-family: $Lexend
+        font-size: 2rem
+        color: $textColor
+
+.border
+    width: 100%
+    height: 1px
+    background-color: #fff
+    margin: 12px 0 12px 0
+    background-color: $bgMeeting

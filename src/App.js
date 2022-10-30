@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.sass"
+import { Route, Routes } from "react-router"
+import EventCalendar from "./screens/calendar/EventCalendar"
+import { Layout } from "./layouts/Layout"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Routes>
+			<Route path="/" element={<Layout />}>
+				<Route path="/calendar" element={<EventCalendar />} />
+				<Route path="/calendar?" element={<EventCalendar />} />
+				<Route path="/events" element={<div className={"home"}>Events</div>} />
+				<Route index element={<div className={"home"}>Home</div>} />
+				<Route path="*" element={<div>No Match</div>} />
+			</Route>
+		</Routes>
+	)
 }
 
-export default App;
+export default App

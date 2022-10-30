@@ -1,0 +1,58 @@
+@import ../assets/styles/_variables
+
+.item
+    list-style: none
+    border-radius: 16px
+    overflow: hidden
+
+    &__wrapper
+        display: inline-flex
+        margin-right: 24px
+        &:last-child
+            margin-right: 0
+    label
+        padding: 3px 16px
+        font-family: Lexend
+        font-size: 1.6rem
+        line-height: 2
+        border-radius: 16px
+    input
+        display: none
+        width: 30px
+        height: 30px
+        background-color: #fff
+
+        &:checked + label
+            color: $activeFilter
+
+.meeting
+    color: $colorMeeting
+    &> label
+        background-color: $bgMeeting
+        color: $colorMeeting
+.meeting > input:checked + label
+    background-color: $colorMeeting
+
+.question
+    color: $colorQuestion
+    &> label
+        background-color: $bgQuestion
+        color: $colorQuestion
+.question > input:checked + label
+    background-color: $colorQuestion
+
+.conference
+    color: $colorConference
+    &> label
+        background-color: $bgConference
+        color: $colorConference
+.conference > input:checked + label
+    background-color: $colorConference
+
+.webinar
+    color: $colorWebinar
+    &> label
+        background-color: $bgWebinar
+        color: $colorWebinar
+.webinar > input:checked + label
+    background-color: $colorWebinar

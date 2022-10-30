@@ -1,0 +1,40 @@
+@import ../assets/styles/_variables
+
+header
+    margin-bottom: 40px
+    border-bottom: 1px solid $bgMeeting
+    display: flex
+    justify-content: space-between
+    padding-top: 24px
+
+.logo
+    font-family: $LexendSemiBold
+    font-size: 2.4rem
+    line-height: 24px
+    color: $colorMeeting
+    text-transform: uppercase
+
+.nav
+    display: flex
+    align-items: center
+
+    li
+        list-style: none
+        margin-right: 80px
+        display: block
+        &:last-child
+            margin-right: 0
+
+    &__item
+        text-decoration: none
+        font-family: $LexendExtraLight
+        font-size: 2rem
+        color: $textColor
+        text-transform: capitalize
+        border: none
+        padding-bottom: 25px
+        background: none
+        display: block
+
+.active
+    border-bottom: 1px solid $colorMeeting

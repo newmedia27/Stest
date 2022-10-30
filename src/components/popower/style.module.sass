@@ -1,0 +1,36 @@
+@import ../assets/styles/_variables
+
+.wrapper
+    width: 360px
+    position: absolute
+    left: 0
+    top: 100%
+    z-index: 2
+    background-color: $bacgroundLayoutGrey
+    padding: 24px
+    text-align-last: left
+
+    h2.title
+        font-family: $LexendExtraLight
+        font-size: 32px
+        color: $textColor
+        padding-bottom: 24px
+        margin-bottom: 24px
+        border-bottom: 1px solid $bgMeeting
+
+.addButton
+    width: 132px
+    height: 40px
+    color: $activeFilter
+    font-family: $LexendMedium
+    font-size: 2rem
+    background-color: $colorMeeting
+    display: flex
+    justify-content: center
+    align-items: center
+    &__wrapper
+        display: flex
+        justify-content: flex-end
+
+.content
+    overflow-y: auto

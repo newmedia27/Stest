@@ -1,0 +1,43 @@
+@import '../../assets/styles/_variables'
+@import '../../assets/styles/_mixin'
+
+div.wrapper
+    width: 100%
+    box-sizing: border-box
+    position: relative
+    margin-bottom: 24px
+    input
+        width: 100%
+        outline: none
+        padding: 10px 12px
+        border: 1px solid transparent
+        background-color: rgba(255, 250, 251, 0.04)
+        box-sizing: border-box
+        margin-bottom: 5px
+        color: $textColor
+        font-family: $LexendLight
+        font-size: 1.6rem
+        &:focus
+            border: 1px solid $bgMeeting
+        &::placeholder
+            color: $textColorGrey
+
+    textarea
+        width: 100%
+        outline: none
+        padding: 10px 12px
+        border: 1px solid transparent
+        background-color: rgba(255, 250, 251, 0.04)
+        box-sizing: border-box
+        margin-bottom: 5px
+        min-height: 98px
+        resize: none
+        color: $textColor
+        font-family: $LexendLight
+        font-size: 1.6rem
+        &:focus
+            border: 1px solid $bgMeeting
+        &:invalid
+            box-shadow: none
+        &::placeholder
+            color: $textColorGrey
