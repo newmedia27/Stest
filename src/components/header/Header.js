@@ -1,4 +1,5 @@
 import classNames from "classnames"
+import { Link } from "react-router-dom"
 import CustomLink from "../link/CustomLink"
 import styles from "./style.module.sass"
 
@@ -9,25 +10,25 @@ const routes = [
 	{
 		to: "/",
 		className,
-        activeClassName,
+		activeClassName,
 		name: "main",
 	},
 	{
 		to: "/events",
 		className,
-        activeClassName,
+		activeClassName,
 		name: "events",
 	},
 	{
 		to: "/calendar",
 		className,
-        activeClassName,
+		activeClassName,
 		name: "calendar",
 	},
 	{
 		to: "/faq",
 		className,
-        activeClassName,
+		activeClassName,
 		name: "FAQ",
 	},
 ]
@@ -35,7 +36,9 @@ const routes = [
 export default function Header() {
 	return (
 		<header>
-			<div className={styles.logo}>logo</div>
+			<div className={styles.logo}>
+				<Link to="/">Logo</Link>
+			</div>
 			<nav>
 				<ul className={styles.nav}>
 					{routes.map(({ name, ...props }) => (
