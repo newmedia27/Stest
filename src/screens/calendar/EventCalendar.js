@@ -167,7 +167,7 @@ function FormCRUD({ close, onSubmit, activeDate, event, handleDelete }) {
 			event: event?.event || eventsCategory[0].value,
 			currentDate: event?.currentDate || activeDate,
 		}
-	}, [event,activeDate,timeOptions])
+	}, [event, activeDate, timeOptions])
 
 	return (
 		<div className={styles.form__wrapper}>
@@ -219,9 +219,11 @@ function FormCRUD({ close, onSubmit, activeDate, event, handleDelete }) {
 								<Button onClick={close} className={styles.cancel}>
 									Cancel
 								</Button>
-								<Button onClick={handleDelete} className={styles.delete}>
-									Delete
-								</Button>
+								{!activeDate && (
+									<Button onClick={handleDelete} className={styles.delete}>
+										Delete
+									</Button>
+								)}
 								<Button className={styles.submit} type="submit">
 									{activeDate ? "Add" : "Save"}
 								</Button>
